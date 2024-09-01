@@ -23,7 +23,7 @@ example {m n : ℤ} (h1 : m + 3 ≤ 2 * n - 1) (h2 : n ≤ 5) : m ≤ 6 := by
 
 
 example {r s : ℚ} (h1 : s + 3 ≥ r) (h2 : s + r ≤ 3) : r ≤ 3 := by
-  have h3 : r ≤ 3 + s := by sorry -- justify with one tactic
+  have h3 : r ≤ 3 + s := by  -- justify with one tactic
   have h4 : r ≤ 3 - s := by sorry -- justify with one tactic
   calc
     r = (r + r) / 2 := by sorry -- justify with one tactic
