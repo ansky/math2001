@@ -67,7 +67,7 @@ example {n : ℤ} (hn : n ≥ 5) : n ^ 2 > 2 * n + 11 :=
     _>= 5 *n := by rel[hn]
     _= 2*n + 3*n := by ring
     _>=2*n + 3*5 := by rel[hn]
-    _> 2*n + 11 := by ring
+    _> 2*n + 11 := by addarith[hn]
 
 -- Example 1.4.7
 example {m n : ℤ} (h : m ^ 2 + n ≤ 2) : n ≤ 2 :=
@@ -127,7 +127,9 @@ example {a b : ℚ} (h1 : 3 ≤ a) (h2 : a + 2 * b ≥ 4) : a + b ≥ 3 :=
   sorry
 
 example {x : ℤ} (hx : x ≥ 9) : x ^ 3 - 8 * x ^ 2 + 2 * x ≥ 3 :=
-  sorry
+  calc
+    x ^ 3 - 8 * x ^ 2 + 2 * x
+
 
 example {n : ℤ} (hn : n ≥ 10) : n ^ 4 - 2 * n ^ 2 > 3 * n ^ 3 :=
   sorry
